@@ -249,29 +249,20 @@ const ul = document.getElementById("pubList");
 publications.forEach(p=>{
   const li=document.createElement("li");
   li.className="pub";
+
+  // 🔹 Automatically bold "Rux D"
+  const boldAuthors = p.authors.replace(/\bRux D\b/g, "<strong>Rux D</strong>");
+
   li.innerHTML = `
     <p class="pub-title">${p.title}</p>
-    const boldAuthors = p.authors.replace(
-  /\bRux D\b/g,
-  "<strong>Rux D</strong>"
-);
-
-li.innerHTML = `
-  <p class="pub-title">${p.title}</p>
-  <p class="pub-meta">${boldAuthors}. <em>${p.journal}</em>. ${p.year}.</p>
-  <div class="pub-links">
-    <a href="${p.pubmed}" target="_blank" rel="noopener">[PubMed]</a>
-  </div>
-`;
-
+    <p class="pub-meta">${boldAuthors}. <em>${p.journal}</em>. ${p.year}.</p>
     <div class="pub-links">
       <a href="${p.pubmed}" target="_blank" rel="noopener">[PubMed]</a>
-    </div>`;
+    </div>
+  `;
+
   ul.appendChild(li);
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
-</body>
-</html>
