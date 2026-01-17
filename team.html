@@ -1,68 +1,310 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Team | Rux Lab</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rux Lab | Team</title>
+  <meta name="description" content="Meet the Rux Lab team." />
 
-<style>
-:root{
-  --accent:#b03060;        /* dark pink */
-  --text:#1a1a1a;
-  --muted:#555;
-  --border:#e5e5e5;
-  --bg:#ffffff;
-  --max:900px;
-}
+  <style>
+    :root{
+      --accent:#b03060;        /* dark pink */
+      --text:#1a1a1a;
+      --muted:#555;
+      --border:#e5e5e5;
+      --bg:#ffffff;
+      --max:900px;
+    }
 
-*{box-sizing:border-box;}
+    *{box-sizing:border-box;}
 
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.6;
-}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
+    }
 
-a{
-  color:var(--accent);
-  text-decoration:none;
-}
-a:hover{ text-decoration:underline; }
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+    a:hover{ text-decoration:underline; }
 
-/* ---------- Header ---------- */
-header{
-  border-bottom:1px solid var(--border);
-}
-.wrap{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:18px 20px;
-}
-.nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:14px;
-}
-  .brand{
-    font-weight:700;
-    font-size:32px;
-    color:var(--accent);
-}
-.menu{
-  list-style:none;
-  display:flex;
-  gap:18px;
-  padding:0;
-  margin:0;
-}
-.menu a{
-  color:var(--text);
-  font-weight:500;
-}
-.menu a[aria-current="page"]{
-  color:var(--accent);
-}
+    /* ---------- Header ---------- */
+    header{
+      border-bottom:1px solid var(--border);
+    }
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 20px;
+    }
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+    .brand{
+      font-weight:700;
+      font-size:32px;
+      color:var(--accent);
+    }
+    .menu{
+      list-style:none;
+      display:flex;
+      gap:18px;
+      padding:0;
+      margin:0;
+    }
+    .menu a{
+      color:var(--text);
+      font-weight:500;
+    }
+    .menu a[aria-current="page"]{
+      color:var(--accent);
+    }
+
+    /* ---------- Page content ---------- */
+    h1{ margin-bottom:6px; }
+    .lede{
+      color:var(--muted);
+      font-size:18px;
+      margin-top:6px;
+    }
+
+    .section{
+      margin-top:18px;
+    }
+    .section h2{
+      margin:0 0 10px;
+      font-size:20px;
+    }
+
+    .team-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:14px;
+      margin:14px 0 18px;
+      align-items:stretch;
+    }
+    .person{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:14px;
+      background:#fff;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .avatar{
+      width:64px;
+      height:64px;
+      border-radius:12px;
+      background:#f2f2f2;
+      flex:0 0 auto;
+      overflow:hidden;
+    }
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .info{
+      min-width:0;
+    }
+    .name{
+      margin:0;
+      font-size:16px;
+      line-height:1.25;
+    }
+    .role{
+      margin:2px 0 8px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .bio{
+      margin:0;
+      font-size:14px;
+      color:#333;
+    }
+    .links{
+      margin-top:10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      font-size:14px;
+    }
+
+    .note{
+      border-left:4px solid var(--accent);
+      padding-left:12px;
+      color:var(--muted);
+      margin:12px 0 0;
+    }
+
+    hr{
+      border:0;
+      border-top:1px solid #e6e6e6;
+      margin:18px 0 14px;
+    }
+    footer{
+      font-size:14px;
+      color:#444;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="nav">
+        <div class="brand">Rux Lab</div>
+
+        <nav aria-label="Primary">
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="team.html" aria-current="page">Team</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1>Team</h1>
+      <p class="lede">
+        We are a collaborative group studying synovial joint development and disease. We value curiosity, rigor, and a supportive training environment.
+      </p>
+
+      <section class="section" aria-label="Principal Investigator">
+        <h2>Principal Investigator</h2>
+
+        <div class="team-grid">
+          <article class="person">
+            <div class="avatar">
+              <!-- Optional: add an image at assets/img/team/danielle-rux.jpg -->
+              <img src="assets/img/team/danielle-rux.jpg" alt="Photo of Danielle Rux" onerror="this.style.display='none';" />
+            </div>
+
+            <div class="info">
+              <h3 class="name">Danielle Rux, PhD</h3>
+              <div class="role">Assistant Professor, UConn Health</div>
+              <p class="bio">
+                The Rux Lab studies how developmental signaling programs build and maintain articular cartilage and how their disruption contributes to osteoarthritis.
+              </p>
+              <div class="links">
+                <!-- Update as desired -->
+                <a href="publications.html">Publications</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">
+          Want to join the lab? See <a href="contact.html">Contact</a> for current opportunities for undergraduates, graduate rotations, and postdocs.
+        </p>
+      </section>
+
+      <section class="section" aria-label="Lab Members">
+        <h2>Lab Members</h2>
+
+        <div class="team-grid">
+          <!-- TEMPLATE CARD: Copy/paste and edit for each person -->
+          <article class="person">
+            <div class="avatar">
+              <!-- Put an image at assets/img/team/member-1.jpg (optional) -->
+              <img src="assets/img/team/member-1.jpg" alt="Photo of Lab Member" onerror="this.style.display='none';" />
+            </div>
+
+            <div class="info">
+              <h3 class="name">Your Name</h3>
+              <div class="role">Role (e.g., Graduate Student, Postdoc, Research Technician)</div>
+              <p class="bio">
+                One sentence on interests/projects (e.g., cartilage zonation, joint development, OA models).
+              </p>
+              <div class="links">
+                <!-- Optional links -->
+                <a href="#" onclick="return false;">Website</a>
+                <a href="#" onclick="return false;">Google Scholar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="person">
+            <div class="avatar">
+              <img src="assets/img/team/member-2.jpg" alt="Photo of Lab Member" onerror="this.style.display='none';" />
+            </div>
+
+            <div class="info">
+              <h3 class="name">Your Name</h3>
+              <div class="role">Role</div>
+              <p class="bio">
+                One sentence on interests/projects.
+              </p>
+              <div class="links">
+                <a href="#" onclick="return false;">Website</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="person">
+            <div class="avatar">
+              <img src="assets/img/team/member-3.jpg" alt="Photo of Lab Member" onerror="this.style.display='none';" />
+            </div>
+
+            <div class="info">
+              <h3 class="name">Your Name</h3>
+              <div class="role">Role</div>
+              <p class="bio">
+                One sentence on interests/projects.
+              </p>
+              <div class="links">
+                <a href="#" onclick="return false;">LinkedIn</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">
+          Tip: add headshots to <code>assets/img/team/</code> (e.g., <code>danielle-rux.jpg</code>) and update the image paths above.
+        </p>
+      </section>
+
+      <section class="section" aria-label="Alumni">
+        <h2>Alumni</h2>
+        <div class="team-grid">
+          <article class="person">
+            <div class="avatar">
+              <img src="assets/img/team/alumni-1.jpg" alt="Photo of Alumni" onerror="this.style.display='none';" />
+            </div>
+            <div class="info">
+              <h3 class="name">Alumni Name</h3>
+              <div class="role">Former Role • Current Position/Institution</div>
+              <p class="bio">Optional: short note on projects or next steps.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <hr />
+
+      <footer>
+        © <span id="year"></span> Danielle Rux Lab | Synovial Joint Development &amp; Disease
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Update year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
