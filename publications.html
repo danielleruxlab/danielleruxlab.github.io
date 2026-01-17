@@ -251,7 +251,19 @@ publications.forEach(p=>{
   li.className="pub";
   li.innerHTML = `
     <p class="pub-title">${p.title}</p>
-    <p class="pub-meta">${p.authors}. <em>${p.journal}</em>. ${p.year}.</p>
+    const boldAuthors = p.authors.replace(
+  /\bRux D\b/g,
+  "<strong>Rux D</strong>"
+);
+
+li.innerHTML = `
+  <p class="pub-title">${p.title}</p>
+  <p class="pub-meta">${boldAuthors}. <em>${p.journal}</em>. ${p.year}.</p>
+  <div class="pub-links">
+    <a href="${p.pubmed}" target="_blank" rel="noopener">[PubMed]</a>
+  </div>
+`;
+
     <div class="pub-links">
       <a href="${p.pubmed}" target="_blank" rel="noopener">[PubMed]</a>
     </div>`;
@@ -263,3 +275,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 </body>
 </html>
+
+
+<p class="pub-meta">${p.authors}. <em>${p.journal}</em>. ${p.year}.</p>
+
