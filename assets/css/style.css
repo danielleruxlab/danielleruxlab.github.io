@@ -133,6 +133,12 @@ header{
   margin-bottom:0;
 }
 
+/* Extra space after the final opportunities section (Postdocs) */
+.opps .opp-group:last-of-type{
+  margin-bottom:32px; /* increase as desired */
+}
+
+
 /* ---------- Figures / Images ---------- */
 figure{ margin:0; }
 
