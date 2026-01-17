@@ -6,9 +6,26 @@
   <title>Rux Lab | Contact</title>
   <meta name="description" content="Contact the Rux Lab and learn about opportunities to join the lab." />
 
-  
   <link rel="stylesheet" href="assets/css/style.css">
- 
+
+  <!-- Contact-page-only spacing tweaks (keeps style.css clean) -->
+  <style>
+    /* Add space after the address block */
+    .contact-list address{
+      display:block;
+      margin-bottom:16px;
+    }
+
+    /* Add consistent spacing between opportunity groups */
+    .opp-group{
+      margin-bottom:20px;
+    }
+
+    /* Add extra space after the final group (Postdocs) */
+    .opps .opp-group:last-of-type{
+      margin-bottom:32px;
+    }
+  </style>
 </head>
 
 <body>
@@ -44,8 +61,7 @@
           <ul class="contact-list">
             <li>
               <span class="label">Email</span>
-              <!-- Update to your preferred contact email -->
-              <a href="mailto:danielle.rux@uchc.edu">rux@uchc.edu</a>
+              <a href="mailto:rux@uchc.edu">rux@uchc.edu</a>
             </li>
             <li>
               <span class="label">Institution</span>
@@ -58,9 +74,9 @@
             <li>
               <span class="label">Address</span>
               <address class="muted">
-                  Musculoskeletal Institute<br>
-                  263 Farmington Avenue<br>
-                  Farmington, CT 06030
+                Musculoskeletal Institute<br>
+                263 Farmington Avenue<br>
+                Farmington, CT 06030
               </address>
             </li>
           </ul>
@@ -71,55 +87,53 @@
           </p>
 
           <p style="margin-top:12px;">
-            <a class="btn" href="mailto:danielle.rux@uchc.edu?subject=Rux%20Lab%20Inquiry">Email the lab</a>
+            <a class="btn" href="mailto:rux@uchc.edu?subject=Rux%20Lab%20Inquiry">Email the lab</a>
           </p>
         </div>
 
-        <!-- Opportunities card (moved here) -->
+        <!-- Opportunities card -->
         <div class="card opps">
           <h2>Opportunities</h2>
 
           <p>
-            The Rux Lab welcomes motivated trainees who are excited to learn and engage with developmental biology,
+            We welcome motivated trainees who are excited to learn and engage with developmental biology,
             cartilage biology, and osteoarthritis research.
           </p>
 
- <div class="opp-group">
-  <h3>Undergraduates</h3>
-  <ul>
-    <li>Hands-on research experience with strong mentorship and clear expectations</li>
-    <li>Opportunities in histology, imaging, and data analysis (depending on availability)</li>
-    <li>Please include your CV/resume and your schedule/availability</li>
-  </ul>
-</div>
+          <div class="opp-group">
+            <h3>Undergraduates</h3>
+            <ul>
+              <li>Hands-on research experience with strong mentorship and clear expectations</li>
+              <li>Opportunities in histology, imaging, and data analysis (depending on availability)</li>
+              <li>Please include your CV/resume and your schedule/availability</li>
+            </ul>
+          </div>
 
-<div class="opp-group">
-  <h3>Graduate students</h3>
-  <ul>
-    <li>Rotation projects available across joint development and disease mechanisms</li>
-    <li>Training in rigorous experimental design, analysis, and scientific communication</li>
-    <li>
-      We are associated with the
-      <a href="https://health.uconn.edu/graduate-school/academics/programs/ph-d-biomedical-science/genetics-and-developmental-biology-area-of-concentration/program-details/" target="_blank" rel="noopener">GDB</a>
-      and
-      <a href="https://health.uconn.edu/graduate-school/academics/programs/ph-d-biomedical-science/skeletal-biology-and-regeneration/program-description/" target="_blank" rel="noopener">SBR</a>
-      graduate programs at UCHC
-    </li>
-  </ul>
-</div>
+          <div class="opp-group">
+            <h3>Graduate students</h3>
+            <ul>
+              <li>Rotation projects available across joint development and disease mechanisms</li>
+              <li>Training in rigorous experimental design, analysis, and scientific communication</li>
+              <li>
+                We are associated with the
+                <a href="https://health.uconn.edu/graduate-school/academics/programs/ph-d-biomedical-science/genetics-and-developmental-biology-area-of-concentration/program-details/" target="_blank" rel="noopener">GDB</a>
+                and
+                <a href="https://health.uconn.edu/graduate-school/academics/programs/ph-d-biomedical-science/skeletal-biology-and-regeneration/program-description/" target="_blank" rel="noopener">SBR</a>
+                graduate programs at UCHC
+              </li>
+            </ul>
+          </div>
 
-<div class="opp-group">
-  <h3>Postdocs / Research staff</h3>
-  <ul>
-    <li>Projects in developmental signaling, spatial organization, and OA models</li>
-    <li>Please send a CV, a brief statement of research interests, and contact info for references</li>
-  </ul>
-</div>
-
+          <div class="opp-group">
+            <h3>Postdocs / Research staff</h3>
+            <ul>
+              <li>Projects in developmental signaling, spatial organization, and OA models</li>
+              <li>Please send a CV, a brief statement of research interests, and contact info for references</li>
+            </ul>
+          </div>
 
           <p class="highlight muted">
-            If you’re interested in joining, email with “Opportunities” in the subject line and tell us what questions
-            you’re excited to tackle.
+            If you’re interested in joining, email with “Opportunities” in the subject line.
           </p>
         </div>
       </section>
@@ -133,9 +147,7 @@
   </div>
 
   <script>
-    // Update year automatically
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
