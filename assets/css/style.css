@@ -125,6 +125,14 @@ header{
   color:#333;
 }
 
+.opp-group{
+  margin-bottom:20px;
+}
+
+.opp-group:last-of-type{
+  margin-bottom:0;
+}
+
 /* ---------- Figures / Images ---------- */
 figure{ margin:0; }
 
