@@ -6,8 +6,28 @@
   <title>Rux Lab | Home</title>
   <meta name="description" content="The Rux Lab studies synovial joint development and disease, including articular cartilage morphogenesis and osteoarthritis." />
 
-<link rel="stylesheet" href="assets/css/style.css">
-  
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Home-page-only styles for cover image -->
+  <style>
+    .cover{
+      width:100%;
+      margin:14px 0 18px;
+    }
+    .cover img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      border-radius:12px;
+      display:block;
+      background:#f2f2f2;
+    }
+    @media (max-width:520px){
+      .cover img{
+        height:220px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -32,27 +52,17 @@
     <main>
       <h1>Welcome!</h1>
 
+      <!-- Cover image -->
+      <section class="cover" aria-label="Lab overview image">
+        <!-- Replace with your preferred image -->
+        <img src="assets/img/cover.jpg" alt="Synovial joint development and articular cartilage research" />
+      </section>
+
+      <!-- Description moved BELOW the image -->
       <p class="lede">
         We study <strong>synovial joint development and disease</strong>, with a focus on how developmental signaling
         programs build and maintain articular cartilage—and how their disruption contributes to osteoarthritis.
       </p>
-
-      <section class="img-row" aria-label="Research highlights">
-        <figure>
-          <img src="assets/img/research-1.jpg" alt="Synovial joint development (placeholder image)" />
-          <figcaption><strong>Joint formation</strong>: patterning synovial tissues and joint boundaries.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/img/research-2.jpg" alt="Articular cartilage zonation (placeholder image)" />
-          <figcaption><strong>Cartilage architecture</strong>: postnatal morphogenesis and zonal organization.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/img/research-3.jpg" alt="Osteoarthritis mechanisms (placeholder image)" />
-          <figcaption><strong>Osteoarthritis</strong>: mechanisms and models of degeneration and repair.</figcaption>
-        </figure>
-      </section>
 
       <hr />
 
@@ -63,7 +73,6 @@
   </div>
 
   <script>
-    // Update year automatically
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
