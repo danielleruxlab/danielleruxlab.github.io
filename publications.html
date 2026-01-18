@@ -1,56 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rux Lab | Publications</title>
-  <meta name="description" content="Rux lab publications." />
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rux Lab | Publications</title>
+  <meta name="description" content="Rux Lab publications." />
 
-<link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-  <style> 
-/* ---------- Main ---------- */
+  <style>
+    /* ---------- Main ---------- */
+    h1{
+      margin:0 0 12px;
+      font-size:30px;
+    }
+    .scholar-link{
+      display:inline-block;
+      margin-bottom:28px;
+      font-size:15px;
+    }
 
-h1{
-  margin:0 0 12px;
-  font-size:30px;
-}
-.scholar-link{
-  display:inline-block;
-  margin-bottom:28px;
-  font-size:15px;
-}
+    /* ---------- Publications ---------- */
+    .pubs{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+    .pub{
+      padding:18px 0;
+      border-bottom:1px solid var(--border);
+    }
+    .pub:last-child{ border-bottom:none; }
 
- 
-/* ---------- Publications ---------- */
-.pubs{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-.pub{
-  padding:18px 0;
-  border-bottom:1px solid var(--border);
-}
-.pub:last-child{ border-bottom:none; }
-
-.pub-title{
-  font-weight:600;
-  font-size:17px;
-  margin:0 0 6px;
-}
-.pub-meta{
-  margin:0 0 6px;
-  color:var(--muted);
-  font-size:15px;
-}
-.pub-links a{
-  font-size:14px;
-  margin-right:12px;
-}
-
-</style>
+    .pub-title{
+      font-weight:600;
+      font-size:17px;
+      margin:0 0 6px;
+    }
+    .pub-meta{
+      margin:0 0 6px;
+      color:var(--muted);
+      font-size:15px;
+    }
+    .pub-links a{
+      font-size:14px;
+      margin-right:12px;
+    }
+  </style>
 </head>
 
 <body>
@@ -72,139 +68,137 @@ h1{
       </div>
     </header>
 
-  
-<main>
-  <div class="wrap">
-    <h1>Selected Publications</h1>
+    <main>
+      <h1>Selected Publications</h1>
 
-    <a class="scholar-link"
-       href="https://scholar.google.com/citations?user=X9bniz0AAAAJ"
-       target="_blank" rel="noopener">
-      View full list on Google Scholar →
-    </a>
+      <a class="scholar-link"
+         href="https://scholar.google.com/citations?user=X9bniz0AAAAJ"
+         target="_blank" rel="noopener">
+        View full list on Google Scholar →
+      </a>
 
-    <ul id="pubList" class="pubs"></ul>
+      <ul id="pubList" class="pubs"></ul>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Danielle Rux Lab | Synovial Joint Development &amp; Disease
+    </footer>
   </div>
-</main>
 
-<script>
-const publications = [
-  {
-    title: "Integrating spatial and single-cell transcriptomics to characterize mouse long bone fracture healing process",
-    authors: "Wang H, He X, Ma M, Dou T, Wei Y, Rux D, Qin L, Yang Y, Zhu Y, Yao L",
-    journal: "Communications Biology",
-    year: 2025,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/40483363/"
-  },
-  {
-    title: "The methylomic landscape of human articular cartilage development contains epigenetic signatures of osteoarthritis risk",
-    authors: "McDonnell E, Orr S, Barter M, Rux D, Brumwell A, Wrobel N, Murphy L, Overman L, Sorial A, Young D, Soul J, Rice S",
-    journal: "American Journal of Human Genetics",
-    year: 2024,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/39579763/"
-  },
-  {
-    title: "Impaired glucose metabolism underlies articular cartilage degeneration in osteoarthritis",
-    authors: "Li K, Ji X, Seeley R, Lee W, Shi Y, Song F, Liao X, Song C, Huang X, Rux D, Cao J, Luo X, Anderson S, Huang W, Long F",
-    journal: "FASEB Journal",
-    year: 2022,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/35608871/"
-  },
-  {
-    title: "Primary cilia direct murine articular cartilage tidemark patterning through Hedgehog signaling and ambulatory load",
-    authors: "Rux D, Helbig K, Han B, Cortese C, Koyama E, Han L, Pacifici M",
-    journal: "Journal of Bone and Mineral Research",
-    year: 2022,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/35060644/"
-  },
-  {
-    title: "SOX9 keeps growth plates and articular cartilage healthy by inhibiting chondrocyte dedifferentiation",
-    authors: "Haseeb A, Kc R, Angelozzi M, de Charleroy C, Rux D, Tower R, Yao L, Pellegrino da Silva, R, Pacifici M, Qin L, Lefebvre V",
-    journal: "PNAS",
-    year: 2021,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/33597301/"
-  },
-  {
-    title: "Premature growth plate closure caused by a Hedgehog cancer drug is preventable by co-administration of a retinoid antagonist",
-    authors: "Koyama E, Mundy C, Saunders C, Chung J, Catheline S, Rux D, Iwamoto M, Pacifici M",
-    journal: "Journal of Bone and Mineral Research",
-    year: 2021,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/33724538/"
-  },
-  {
-    title: "Hox11 expression characterizes developing zeugopod synovial joints",
-    authors: "Rux D, Helbig K, Koyama E, Pacifici M",
-    journal: "Developmental Biology",
-    year: 2021,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/34010606/"
-  },
-  {
-    title: "Joints in the appendicular skeleton: Developmental mechanisms and evolutionary influences",
-    authors: "Rux D, Decker R, Koyama E, Pacifici M",
-    journal: "Current Topics in Developmental Biology",
-    year: 2019,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/30902250/"
-  },
-  {
-    title: "Hox11 function is required for region-specific fracture repair",
-    authors: "Rux D, Song J, Pineault K, Mandair G, Swinehart I, Schlientz A, Garthus K, Goldstein S, Kozloff K, Wellik D",
-    journal: "Journal of Bone and Mineral Research",
-    year: 2017,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/28470721/"
-  },
-  {
-    title: "Hox11 genes in the adult skeleton: Novel functions beyond embryonic development",
-    authors: "Rux D, Wellik D",
-    journal: "Developmental Dynamics",
-    year: 2017,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/28026082/"
-  },
-  {
-    title: "Regionally restricted Hox function in adult bone marrow mesenchymal stem cells",
-    authors: "Rux D, Song J, Swinehart I, Pineault K, Schlientz A, Trulik K, Goldstein S, Kozloff K, Lucas D, Wellik D ",
-    journal: "Developmental Cell",
-    year: 2016,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/27939685/"
-  },
-  {
-    title: "HoxA3 is an apical regulator of haemogenic endothelium",
-    authors: "Iacovino M, Chong D, Szatmari I, Hartweck L, Rux D, Caprioli A, Cleaver O, Kyba M",
-    journal: "Nature Cell Biology",
-    year: 2011,
-    pubmed: "https://pubmed.ncbi.nlm.nih.gov/21170035/"
-  }
-];
+  <script>
+    const publications = [
+      {
+        title: "Integrating spatial and single-cell transcriptomics to characterize mouse long bone fracture healing process",
+        authors: "Wang H, He X, Ma M, Dou T, Wei Y, Rux D, Qin L, Yang Y, Zhu Y, Yao L",
+        journal: "Communications Biology",
+        year: 2025,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/40483363/"
+      },
+      {
+        title: "The methylomic landscape of human articular cartilage development contains epigenetic signatures of osteoarthritis risk",
+        authors: "McDonnell E, Orr S, Barter M, Rux D, Brumwell A, Wrobel N, Murphy L, Overman L, Sorial A, Young D, Soul J, Rice S",
+        journal: "American Journal of Human Genetics",
+        year: 2024,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/39579763/"
+      },
+      {
+        title: "Impaired glucose metabolism underlies articular cartilage degeneration in osteoarthritis",
+        authors: "Li K, Ji X, Seeley R, Lee W, Shi Y, Song F, Liao X, Song C, Huang X, Rux D, Cao J, Luo X, Anderson S, Huang W, Long F",
+        journal: "FASEB Journal",
+        year: 2022,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/35608871/"
+      },
+      {
+        title: "Primary cilia direct murine articular cartilage tidemark patterning through Hedgehog signaling and ambulatory load",
+        authors: "Rux D, Helbig K, Han B, Cortese C, Koyama E, Han L, Pacifici M",
+        journal: "Journal of Bone and Mineral Research",
+        year: 2022,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/35060644/"
+      },
+      {
+        title: "SOX9 keeps growth plates and articular cartilage healthy by inhibiting chondrocyte dedifferentiation",
+        authors: "Haseeb A, Kc R, Angelozzi M, de Charleroy C, Rux D, Tower R, Yao L, Pellegrino da Silva, R, Pacifici M, Qin L, Lefebvre V",
+        journal: "PNAS",
+        year: 2021,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/33597301/"
+      },
+      {
+        title: "Premature growth plate closure caused by a Hedgehog cancer drug is preventable by co-administration of a retinoid antagonist",
+        authors: "Koyama E, Mundy C, Saunders C, Chung J, Catheline S, Rux D, Iwamoto M, Pacifici M",
+        journal: "Journal of Bone and Mineral Research",
+        year: 2021,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/33724538/"
+      },
+      {
+        title: "Hox11 expression characterizes developing zeugopod synovial joints",
+        authors: "Rux D, Helbig K, Koyama E, Pacifici M",
+        journal: "Developmental Biology",
+        year: 2021,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/34010606/"
+      },
+      {
+        title: "Joints in the appendicular skeleton: Developmental mechanisms and evolutionary influences",
+        authors: "Rux D, Decker R, Koyama E, Pacifici M",
+        journal: "Current Topics in Developmental Biology",
+        year: 2019,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/30902250/"
+      },
+      {
+        title: "Hox11 function is required for region-specific fracture repair",
+        authors: "Rux D, Song J, Pineault K, Mandair G, Swinehart I, Schlientz A, Garthus K, Goldstein S, Kozloff K, Wellik D",
+        journal: "Journal of Bone and Mineral Research",
+        year: 2017,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/28470721/"
+      },
+      {
+        title: "Hox11 genes in the adult skeleton: Novel functions beyond embryonic development",
+        authors: "Rux D, Wellik D",
+        journal: "Developmental Dynamics",
+        year: 2017,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/28026082/"
+      },
+      {
+        title: "Regionally restricted Hox function in adult bone marrow mesenchymal stem cells",
+        authors: "Rux D, Song J, Swinehart I, Pineault K, Schlientz A, Trulik K, Goldstein S, Kozloff K, Lucas D, Wellik D",
+        journal: "Developmental Cell",
+        year: 2016,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/27939685/"
+      },
+      {
+        title: "HoxA3 is an apical regulator of haemogenic endothelium",
+        authors: "Iacovino M, Chong D, Szatmari I, Hartweck L, Rux D, Caprioli A, Cleaver O, Kyba M",
+        journal: "Nature Cell Biology",
+        year: 2011,
+        pubmed: "https://pubmed.ncbi.nlm.nih.gov/21170035/"
+      }
+    ];
 
-// Sort newest first
-publications.sort((a,b)=>b.year-a.year);
+    // Sort newest first
+    publications.sort((a, b) => b.year - a.year);
 
-const ul = document.getElementById("pubList");
-publications.forEach(p=>{
-  const li=document.createElement("li");
-  li.className="pub";
+    const ul = document.getElementById("pubList");
 
-  // 🔹 Automatically bold "Rux D"
-  const boldAuthors = p.authors.replace(/\bRux D\b/g, "<strong>Rux D</strong>");
+    publications.forEach(p => {
+      const li = document.createElement("li");
+      li.className = "pub";
 
-  li.innerHTML = `
-    <p class="pub-title">${p.title}</p>
-    <p class="pub-meta">${boldAuthors}. <em>${p.journal}</em>. ${p.year}.</p>
-    <div class="pub-links">
-      <a href="${p.pubmed}" target="_blank" rel="noopener">[PubMed]</a>
-    </div>
-  `;
+      // Automatically bold "Rux D"
+      const boldAuthors = p.authors.replace(/\bRux D\b/g, "<strong>Rux D</strong>");
 
-  ul.appendChild(li);
-});
-  
-<footer>
-  © <span id="year"></span> Danielle Rux Lab | Synovial Joint Development &amp; Disease
-</footer>
-</main>
-</div>
+      li.innerHTML = `
+        <p class="pub-title">${p.title}</p>
+        <p class="pub-meta">${boldAuthors}. <em>${p.journal}</em>. ${p.year}.</p>
+        <div class="pub-links">
+          <a href="${p.pubmed}" target="_blank" rel="noopener">[PubMed]</a>
+        </div>
+      `;
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+      ul.appendChild(li);
+    });
+
+    // Footer year (safe)
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
