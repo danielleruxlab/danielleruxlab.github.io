@@ -1,4 +1,3 @@
-
 /* ---------- Theme ---------- */
 :root{
   --accent:#b03060;        /* dark pink */
@@ -43,6 +42,7 @@ main h1{ margin-bottom:6px; }
 /* ---------- Header / Nav ---------- */
 header{
   border-bottom:1px solid var(--border);
+  padding:14px 0;
 }
 
 .nav{
@@ -57,6 +57,7 @@ header{
   font-weight:700;
   font-size:32px;
   color:var(--accent);
+  letter-spacing:0.2px;
 }
 
 .menu{
@@ -65,33 +66,23 @@ header{
   gap:18px;
   padding:0;
   margin:0;
+  flex-wrap:wrap; /* prevents ugly overflow if links wrap */
 }
 
 .menu a{
   color:var(--text);
   font-weight:500;
+  display:inline-block;
+  padding:6px 8px;
+  border-radius:10px;
 }
 
+/* Current page indicator */
 .menu a[aria-current="page"]{
   color:var(--accent);
+  background:rgba(176,48,96,0.10);
+  text-decoration:none;
 }
-
-    <header>
-      <div class="nav">
-        <div class="brand">Rux Lab</div>
-
-        <nav aria-label="Primary">
-          <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="news.html" aria-current="page">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
 
 /* ---------- Sections ---------- */
 .section{
@@ -276,6 +267,7 @@ figcaption{
 }
 
 /* ---------- Footer ---------- */
+/* If you keep <hr /> above footer on some pages */
 hr{
   border:0;
   border-top:1px solid #e6e6e6;
@@ -283,17 +275,15 @@ hr{
 }
 
 footer{
+  border-top:1px solid var(--border);
+  margin-top:26px;
+  padding:14px 0;
   font-size:14px;
   color:#444;
 }
-
-<footer>
-© <span id="year"></span> Danielle Rux Lab | Synovial Joint Development &amp; Disease
-</footer>
 
 /* ---------- Small screens ---------- */
 @media (max-width:520px){
   .menu{ gap:12px; }
   .brand{ font-size:22px; }
 }
-
