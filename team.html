@@ -234,27 +234,72 @@
               <p class="bio">
                 Lucy is the OG member of the lab. What she lacks in talent at the bench is more than made up for in butt wiggles and howls.
               </p>
-              </div>
             </div>
           </article>
         </div>
 
 
-      <section class="section" aria-label="Alumni">
-        <h2>Alumni</h2>
-        <div class="team-grid">
-          <article class="person">
-            <div class="avatar">
-              <img src="assets/img/team/alumni-1.jpg" alt="Photo of Alumni" onerror="this.style.display='none';" />
-            </div>
-            <div class="info">
-              <h3 class="name">Alumni Name</h3>
-              <div class="role">Former Role • Current Position/Institution</div>
-              <p class="bio">Optional: short note on projects or next steps.</p>
-            </div>
-          </article>
+```html
+<section class="section" aria-label="Alumni">
+  <h2>Alumni</h2>
+
+  <div class="team-grid">
+
+    <article class="person">
+      <div class="avatar">
+        <img src="assets/img/team/alumni-1.jpg"
+             alt="Photo of Alumni"
+             onerror="this.style.display='none';" />
+      </div>
+
+      <div class="info">
+        <h3 class="name">Alumni Name</h3>
+
+        <div class="role">
+          Former Research Technician • Current Position at XYZ Institution
         </div>
-      </section>
+
+        <p class="bio">
+          Worked on cartilage development and osteoarthritis models in the
+          Rux Lab. Currently pursuing graduate studies in biomedical sciences.
+        </p>
+
+        <div class="links">
+          <a href="#" onclick="return false;">Current Institution</a>
+          <a href="#" onclick="return false;">LinkedIn</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="person">
+      <div class="avatar">
+        <img src="assets/img/team/alumni-2.jpg"
+             alt="Photo of Alumni"
+             onerror="this.style.display='none';" />
+      </div>
+
+      <div class="info">
+        <h3 class="name">Alumni Name</h3>
+
+        <div class="role">
+          Undergraduate Researcher • Current Position at XYZ Institution
+        </div>
+
+        <p class="bio">
+          Contributed to studies of synovial joint development and
+          articular cartilage morphogenesis.
+        </p>
+
+        <div class="links">
+          <a href="#" onclick="return false;">Current Institution</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+```
+
 
       <hr />
 
