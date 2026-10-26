@@ -7,10 +7,10 @@
   <meta name="description" content="Meet the Rux Lab team." />
 
   <link rel="stylesheet" href="assets/css/style.css">
-  
+
   <style>
     :root{
-      --accent:#b03060;        /* dark pink */
+      --accent:#b03060;
       --text:#1a1a1a;
       --muted:#555;
       --border:#e5e5e5;
@@ -32,10 +32,16 @@
       color:var(--accent);
       text-decoration:none;
     }
-    a:hover{ text-decoration:underline; }
 
-    /* ---------- Page content ---------- */
-    h1{ margin-bottom:6px; }
+    a:hover{
+      text-decoration:underline;
+    }
+
+    /* Page content */
+    h1{
+      margin-bottom:6px;
+    }
+
     .lede{
       color:var(--muted);
       font-size:18px;
@@ -44,61 +50,74 @@
 
     .section{
       margin-top:18px;
+      width:100%;
     }
+
     .section h2{
       margin:0 0 10px;
       font-size:20px;
     }
 
-  .team-grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:20px;
-  margin:14px 0 18px;
-}
-    
-   .person{
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:24px;
-  background:#fff;
-  display:flex;
-  gap:24px;
-  align-items:flex-start;
-}
-    
- .avatar{
-  width:180px;
-  height:180px;
-  border-radius:12px;
-  background:#f2f2f2;
-  flex:0 0 180px;
-  overflow:hidden;
-}
+    /* Team layout */
+    .team-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1fr);
+      gap:20px;
+      margin:14px 0 18px;
+      width:100%;
+    }
+
+    .person{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:24px;
+      background:#fff;
+      display:flex;
+      gap:24px;
+      align-items:flex-start;
+      width:100%;
+      min-width:0;
+    }
+
+    .avatar{
+      width:180px;
+      height:180px;
+      border-radius:12px;
+      background:#f2f2f2;
+      flex:0 0 180px;
+      overflow:hidden;
+    }
+
     .avatar img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
     }
+
     .info{
       min-width:0;
+      flex:1;
     }
+
     .name{
       margin:0;
       font-size:16px;
       line-height:1.25;
     }
+
     .role{
       margin:2px 0 8px;
       color:var(--muted);
       font-size:14px;
     }
+
     .bio{
       margin:0;
       font-size:14px;
       color:#333;
     }
+
     .links{
       margin-top:10px;
       display:flex;
@@ -114,11 +133,27 @@
       margin:12px 0 0;
     }
 
+    /* Mobile layout */
+    @media (max-width:600px){
+      .person{
+        flex-direction:column;
+        padding:18px;
+        gap:16px;
+      }
+
+      .avatar{
+        width:160px;
+        height:160px;
+        flex:0 0 auto;
+      }
+    }
+
     hr{
       border:0;
       border-top:1px solid #e6e6e6;
       margin:18px 0 14px;
     }
+
     footer{
       font-size:14px;
       color:#444;
@@ -127,188 +162,291 @@
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <div class="nav">
-        <div class="brand">Rux Lab</div>
+<div class="wrap">
 
-        <nav aria-label="Primary">
-          <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="team.html" aria-current="page">Team</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="nav">
+      <div class="brand">Rux Lab</div>
+
+      <nav aria-label="Primary">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="team.html" aria-current="page">Team</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <h1>Team</h1>
+
+    <p class="lede">
+      We are a collaborative group studying synovial joint development and disease.
+      We value curiosity, rigor, and a supportive training environment.
+    </p>
+
+
+    <!-- PRINCIPAL INVESTIGATOR -->
+
+    <section class="section" aria-label="Principal Investigator">
+
+      <h2>Principal Investigator</h2>
+
+      <div class="team-grid">
+
+        <article class="person">
+
+          <div class="avatar">
+            <img
+              src="assets/img/team/danielle-rux.jpg"
+              alt="Photo of Danielle Rux"
+              onerror="this.style.display='none';"
+            />
+          </div>
+
+          <div class="info">
+
+            <h3 class="name">Danielle Rux, PhD</h3>
+
+            <div class="role">
+              Assistant Professor, UConn Health
+            </div>
+
+            <p class="bio">
+              Danielle (she/her) completed undergraduate work in
+              Biochemistry at the University of Wisconsin–La Crosse,
+              where she was also a competitive swimmer.
+              She discovered her passion for scientific research while
+              working as a research technician at the University of Minnesota
+              before pursuing her PhD at the University of Michigan.
+              Her doctoral research led to the discovery that HOX genes,
+              transcription factors essential for embryonic patterning,
+              are reactivated following fracture injury to promote skeletal
+              regeneration in adult animals. During her postdoctoral training
+              at the Children’s Hospital of Philadelphia, she focused on
+              postnatal synovial joint development. In 2023, she launched
+              her independent research program at UConn Health.
+              Outside the lab, Danielle enjoys swimming, running, biking,
+              and spending time with her dog, Lucy!
+            </p>
+
+          </div>
+
+        </article>
+
       </div>
-    </header>
 
-    <main>
-      <h1>Team</h1>
-      <p class="lede">
-        We are a collaborative group studying synovial joint development and disease. We value curiosity, rigor, and a supportive training environment.
+      <p class="note">
+        Want to join the lab? See
+        <a href="contact.html">Contact</a>
+        for current opportunities for undergraduates,
+        graduate rotations, and postdocs.
       </p>
 
-      <section class="section" aria-label="Principal Investigator">
-        <h2>Principal Investigator</h2>
+    </section>
 
-        <div class="team-grid">
-          <article class="person">
-            <div class="avatar">
-              <!-- Optional: add an image at assets/img/team/danielle-rux.jpg -->
-              <img src="assets/img/team/danielle-rux.jpg" alt="Photo of Danielle Rux" onerror="this.style.display='none';" />
+
+    <!-- LAB MEMBERS -->
+
+    <section class="section" aria-label="Lab Members">
+
+      <h2>Lab Members</h2>
+
+      <div class="team-grid">
+
+        <article class="person">
+
+          <div class="avatar">
+            <img
+              src="assets/img/team/member-1.jpg"
+              alt="Photo of Lab Member"
+              onerror="this.style.display='none';"
+            />
+          </div>
+
+          <div class="info">
+
+            <h3 class="name">Your Name</h3>
+
+            <div class="role">
+              Role (e.g., Graduate Student, Postdoc, Research Technician)
             </div>
 
-            <div class="info">
-              <h3 class="name">Danielle Rux, PhD</h3>
-              <div class="role">Assistant Professor, UConn Health</div>
-              <p class="bio">
-                Danielle (she/her) completed undergraduate work in Biochemistry at the University of Wisconsin – La Crosse where she was also a competitive swimmer. 
-                She discovered her passion for scientific research while working as a research technician at the University of Minnesota before pursuing her PhD at the 
-                University of Michigan. Her doctoral research led to the discovery that HOX genes, transcription factors essential of embryonic patterning, are reactivated 
-                following fracture injury to promote skeletal regeneration in adult animals. During her postdoctoral training at the Children’s Hospital of Philadelphia, 
-                she focused on postnatal synovial joint development and in 2023 she launched her independent research program at UConn Health. Outside the lab, Danielle 
-                enjoys swimming, running and biking and spending time with her dog, Lucy!
-              </p>
-              </div>
-            </div>
-          </article>
-        </div>
+            <p class="bio">
+              One sentence on interests/projects
+              (e.g., cartilage zonation, joint development, OA models).
+            </p>
 
-        <p class="note">
-          Want to join the lab? See <a href="contact.html">Contact</a> for current opportunities for undergraduates, graduate rotations, and postdocs.
-        </p>
-      </section>
-
-      <section class="section" aria-label="Lab Members">
-        <h2>Lab Members</h2>
-
-        <div class="team-grid">
-          <!-- TEMPLATE CARD: Copy/paste and edit for each person -->
-          <article class="person">
-            <div class="avatar">
-              <!-- Put an image at assets/img/team/member-1.jpg (optional) -->
-              <img src="assets/img/team/member-1.jpg" alt="Photo of Lab Member" onerror="this.style.display='none';" />
+            <div class="links">
+              <a href="#" onclick="return false;">Website</a>
+              <a href="#" onclick="return false;">Google Scholar</a>
             </div>
 
-            <div class="info">
-              <h3 class="name">Your Name</h3>
-              <div class="role">Role (e.g., Graduate Student, Postdoc, Research Technician)</div>
-              <p class="bio">
-                One sentence on interests/projects (e.g., cartilage zonation, joint development, OA models).
-              </p>
-              <div class="links">
-                <!-- Optional links -->
-                <a href="#" onclick="return false;">Website</a>
-                <a href="#" onclick="return false;">Google Scholar</a>
-              </div>
-            </div>
-          </article>
+          </div>
 
-          <article class="person">
-            <div class="avatar">
-              <img src="assets/img/team/member-2.jpg" alt="Photo of Lab Member" onerror="this.style.display='none';" />
-            </div>
+        </article>
 
-            <div class="info">
-              <h3 class="name">Your Name</h3>
-              <div class="role">Role</div>
-              <p class="bio">
-                One sentence on interests/projects.
-              </p>
-              <div class="links">
-                <a href="#" onclick="return false;">Website</a>
-              </div>
-            </div>
-          </article>
 
-          <article class="person">
-            <div class="avatar">
-              <img src="assets/img/team/Lucy.jpg" alt="Photo of Dog" onerror="this.style.display='none';" />
+        <article class="person">
+
+          <div class="avatar">
+            <img
+              src="assets/img/team/member-2.jpg"
+              alt="Photo of Lab Member"
+              onerror="this.style.display='none';"
+            />
+          </div>
+
+          <div class="info">
+
+            <h3 class="name">Your Name</h3>
+
+            <div class="role">Role</div>
+
+            <p class="bio">
+              One sentence on interests/projects.
+            </p>
+
+            <div class="links">
+              <a href="#" onclick="return false;">Website</a>
             </div>
 
-            <div class="info">
-              <h3 class="name">Lucy</h3>
-              <div class="role">Lab Mascot</div>
-              <p class="bio">
-                Lucy is the OG member of the lab. What she lacks in talent at the bench is more than made up for in butt wiggles and howls.
-              </p>
-            </div>
-          </article>
-        </div>
+          </div>
 
-<section class="section" aria-label="Alumni">
-  <h2>Alumni</h2>
+        </article>
 
-  <div class="team-grid">
 
-    <article class="person">
-      <div class="avatar">
-        <img src="assets/img/team/alumni-1.jpg"
-             alt="Photo of Alumni"
-             onerror="this.style.display='none';" />
+        <article class="person">
+
+          <div class="avatar">
+            <img
+              src="assets/img/team/Lucy.jpg"
+              alt="Photo of Lucy"
+              onerror="this.style.display='none';"
+            />
+          </div>
+
+          <div class="info">
+
+            <h3 class="name">Lucy</h3>
+
+            <div class="role">Lab Mascot</div>
+
+            <p class="bio">
+              Lucy is the OG member of the lab.
+              What she lacks in talent at the bench is more than
+              made up for in butt wiggles and howls.
+            </p>
+
+          </div>
+
+        </article>
+
       </div>
 
-      <div class="info">
-        <h3 class="name">Alumni Name</h3>
+    </section>
 
-        <div class="role">
-          Former Research Technician • Current Position at XYZ Institution
-        </div>
 
-        <p class="bio">
-          Worked on cartilage development and osteoarthritis models in the
-          Rux Lab. Currently pursuing graduate studies in biomedical sciences.
-        </p>
+    <!-- ALUMNI -->
 
-        <div class="links">
-          <a href="#" onclick="return false;">Current Institution</a>
-          <a href="#" onclick="return false;">LinkedIn</a>
-        </div>
+    <section class="section" aria-label="Alumni">
+
+      <h2>Alumni</h2>
+
+      <div class="team-grid">
+
+        <article class="person">
+
+          <div class="avatar">
+            <img
+              src="assets/img/team/alumni-1.jpg"
+              alt="Photo of Alumni"
+              onerror="this.style.display='none';"
+            />
+          </div>
+
+          <div class="info">
+
+            <h3 class="name">Alumni Name</h3>
+
+            <div class="role">
+              Former Research Technician •
+              Current Position at XYZ Institution
+            </div>
+
+            <p class="bio">
+              Worked on cartilage development and osteoarthritis
+              models in the Rux Lab. Currently pursuing graduate
+              studies in biomedical sciences.
+            </p>
+
+            <div class="links">
+              <a href="#" onclick="return false;">Current Institution</a>
+              <a href="#" onclick="return false;">LinkedIn</a>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article class="person">
+
+          <div class="avatar">
+            <img
+              src="assets/img/team/alumni-2.jpg"
+              alt="Photo of Alumni"
+              onerror="this.style.display='none';"
+            />
+          </div>
+
+          <div class="info">
+
+            <h3 class="name">Alumni Name</h3>
+
+            <div class="role">
+              Undergraduate Researcher •
+              Current Position at XYZ Institution
+            </div>
+
+            <p class="bio">
+              Contributed to studies of synovial joint development
+              and articular cartilage morphogenesis.
+            </p>
+
+            <div class="links">
+              <a href="#" onclick="return false;">Current Institution</a>
+            </div>
+
+          </div>
+
+        </article>
+
       </div>
-    </article>
 
-    <article class="person">
-      <div class="avatar">
-        <img src="assets/img/team/alumni-2.jpg"
-             alt="Photo of Alumni"
-             onerror="this.style.display='none';" />
-      </div>
-
-      <div class="info">
-        <h3 class="name">Alumni Name</h3>
-
-        <div class="role">
-          Undergraduate Researcher • Current Position at XYZ Institution
-        </div>
-
-        <p class="bio">
-          Contributed to studies of synovial joint development and
-          articular cartilage morphogenesis.
-        </p>
-
-        <div class="links">
-          <a href="#" onclick="return false;">Current Institution</a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
+    </section>
 
 
-      <hr />
+    <hr />
 
-      <footer>
-        © <span id="year"></span> Danielle Rux Lab | Synovial Joint Development &amp; Disease
-      </footer>
-    </main>
-  </div>
+    <footer>
+      © <span id="year"></span> Danielle Rux Lab |
+      Synovial Joint Development &amp; Disease
+    </footer>
 
-  <script>
-    // Update year automatically
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  </main>
+
+</div>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
 </body>
+</html>
