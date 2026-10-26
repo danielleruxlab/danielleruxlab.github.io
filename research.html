@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rux Lab | Research</title>
-  <meta name="description" content="Research in the Rux Lab: synovial joint development, articular cartilage morphogenesis, and osteoarthritis." />
+  <meta name="description" content="The Rux Lab investigates developmental mechanisms that shape synovial joint formation, articular cartilage maturation, and lifelong joint health." />
 
-    <link rel="stylesheet" href="assets/css/style.css">
-  
+  <link rel="stylesheet" href="assets/css/style.css">
+
   <style>
     :root{
       --accent:#b03060;
@@ -28,8 +28,14 @@
       line-height:1.6;
     }
 
-    a{ color:var(--accent); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
 
     .section{
       margin-top:20px;
@@ -40,6 +46,10 @@
     .section h2{
       margin:10px 0 8px;
       font-size:20px;
+    }
+
+    .section p{
+      margin:0 0 16px;
     }
 
     .kicker{
@@ -77,46 +87,6 @@
       color:#333;
     }
 
-    .stack-cards .cards{
-    grid-template-columns: 1fr;
-    }
-    
-    /* Card images */
-    .card img{
-      width:100%;
-      height:auto;
-      object-fit:unset;
-      border-radius:10px;
-      display:block;
-      margin:8px 0 10px;
-      border:1px solid var(--border);
-      background:#f2f2f2;
-    }
-
-    /* Feature row */
-    .feature{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:14px;
-      margin:12px 0 6px;
-    }
-
-    @media (min-width:720px){
-      .feature{ grid-template-columns:320px 1fr; }
-    }
-
-    .feature img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      border-radius:10px;
-      border:1px solid var(--border);
-      background:#f2f2f2;
-    }
-
-    .bullets{ padding-left:18px; }
-    .bullets li{ margin:6px 0; }
-
     hr{
       border:0;
       border-top:1px solid #e6e6e6;
@@ -127,25 +97,12 @@
       font-size:14px;
       color:#444;
     }
-
-    .cta{
-      display:inline-block;
-      margin-top:8px;
-      padding:10px 12px;
-      border:1px solid var(--accent);
-      border-radius:10px;
-      color:var(--accent);
-      font-weight:600;
-    }
-    .cta:hover{
-      background:rgba(176,48,96,.06);
-      text-decoration:none;
-    }
   </style>
 </head>
 
 <body>
 <div class="wrap">
+
 <header>
   <div class="nav">
     <a class="brand" href="index.html">Rux Lab</a>
@@ -163,79 +120,77 @@
 </header>
 
 <main>
+
 <h1>Research</h1>
 
+<!-- ABOUT THE RUX LAB -->
+
 <section class="section">
-  <span class="kicker">Overview</span>
-  <h2>From development to lifelong tissue health</h2>
+  <span class="kicker">Our Research</span>
+  <h2>About the Rux Lab</h2>
 
-  <div class="feature">
-    <img src="assets/img/research-overview.png" alt="Synovial joint tissues (placeholder)" />
-    <div>
-      <p>
-        Synovial joints must form correctly during development, mature after birth, and remain durable under decades of mechanical load.
-        Our lab investigates how spatial and temporal signaling cues pattern joint tissues and how altered signaling predisposes joints to degeneration.
-      </p>
-      <ul class="bullets">
-        <li><strong>Development:</strong> tissue specification and patterning</li>
-        <li><strong>Postnatal maturation:</strong> cartilage architecture and zonation</li>
-        <li><strong>Disease:</strong> osteoarthritis onset and progression</li>
-      </ul>
-    </div>
-  </div>
+  <p>
+    The Rux Lab investigates how developmental mechanisms shape
+    the structure and function of our joints and influence their
+    health throughout life. Our research focuses on understanding
+    how the specialized tissues of synovial joints form, mature,
+    and maintain their organization, with particular emphasis
+    on articular cartilage.
+  </p>
+
+  <p>
+    Although the basic architecture of our joints is established
+    during embryonic development, many features essential for
+    lifelong joint function emerge during postnatal growth.
+    We seek to uncover the molecular and cellular mechanisms
+    that guide this maturation process and determine how their
+    disruption contributes to joint degeneration and osteoarthritis.
+  </p>
+
+  <p>
+    Using mouse genetics, developmental biology, advanced imaging,
+    and molecular approaches, we investigate how key developmental
+    signaling pathways, including Hedgehog signaling and HOX
+    transcription factors, regulate joint formation and articular
+    cartilage organization.
+  </p>
+
+  <p>
+    <strong>
+      Our overarching goal is to understand how healthy joints
+      are built so that we can better understand why they fail.
+    </strong>
+    By connecting developmental biology with joint health and
+    disease, our research aims to identify fundamental mechanisms
+    that support cartilage integrity and inform future strategies
+    for joint repair and regeneration.
+  </p>
+
 </section>
 
-<section class="section stack-cards">
-  <span class="kicker">Research themes</span>
-  <h2>What we work on</h2>
 
-  <div class="cards">
-    <article class="card">
-      <h3>Synovial joint development</h3>
-      <img src="assets/img/joint-development.png" alt="Synovial joint development (placeholder)" />
-      <p>
-        The diverse connective tissues of the synovial joint arise from a shared pool of joint-specific progenitors.
-        We study how these tissues are patterned and how early developmental decisions shape later tissue organization.
-      </p>
-    </article>
-
-    <article class="card">
-      <h3>Articular cartilage morphogenesis</h3>
-      <img src="assets/img/AC-morphogenesis.png" alt="Articular cartilage morphogenesis (placeholder)" />
-      <p>
-        Articular cartilage enables smooth joint movement through a specialized zonal structure that forms after birth.
-        Our lab studies how this postnatal architecture is established and maintained.
-      </p>
-    </article>
-
-    <article class="card">
-      <h3>Osteoarthritis pathogenesis</h3>
-      <img src="assets/img/osteoarthritis.png" alt="Osteoarthritis pathogenesis (placeholder)" />
-      <p>
-        We investigate how disrupted developmental signaling and tissue maturation drive joint degeneration,
-        with the goal of identifying targets for prevention or repair.
-      </p>
-    </article>
-  </div>
-</section>
+<!-- RESEARCH APPROACHES -->
 
 <section class="section">
   <span class="kicker">Approaches</span>
   <h2>How we do it</h2>
 
   <div class="cards">
+
     <article class="card">
-      <h3>Genetics & mouse models</h3>
+      <h3>Genetics &amp; mouse models</h3>
       <p>
-        Tissue- and time-specific genetic perturbations to test how developmental pathways shape postnatal cartilage
+        Tissue- and time-specific genetic perturbations to test
+        how developmental pathways shape postnatal cartilage
         organization and long-term joint health.
       </p>
     </article>
 
     <article class="card">
-      <h3>Histology & spatial biology</h3>
+      <h3>Histology &amp; spatial biology</h3>
       <p>
-        Quantitative tissue phenotyping, molecular localization, and spatial analyses to connect signaling activity
+        Quantitative tissue phenotyping, molecular localization,
+        and spatial analyses to connect signaling activity
         with tissue structure and function.
       </p>
     </article>
@@ -243,27 +198,36 @@
     <article class="card">
       <h3>Transcriptomics</h3>
       <p>
-        Bulk and single-cell or single-nucleus transcriptomic approaches to map pathway states across development,
+        Bulk and single-cell or single-nucleus transcriptomic
+        approaches to map pathway states across development,
         maturation, and disease.
       </p>
     </article>
+
   </div>
 
-  <p style="margin-top:10px;">
-    Interested in the details? See our <a href="publications.html">Publications</a> for recent work and themes.
+  <p style="margin-top:16px;">
+    Interested in the details? See our
+    <a href="publications.html">Publications</a>
+    for recent work and themes.
   </p>
+
 </section>
 
 <hr />
 
 <footer>
-  © <span id="year"></span> Danielle Rux Lab | Synovial Joint Development &amp; Disease
+  © <span id="year"></span> Danielle Rux Lab |
+  Synovial Joint Development &amp; Disease
 </footer>
+
 </main>
 </div>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
 </script>
+
 </body>
 </html>
