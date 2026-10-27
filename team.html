@@ -18,11 +18,14 @@
       --max:900px;
     }
 
-    *{box-sizing:border-box;}
+    *{
+      box-sizing:border-box;
+    }
 
     body{
       margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      font-family:-apple-system,BlinkMacSystemFont,
+      "Segoe UI",Roboto,Helvetica,Arial,sans-serif;
       color:var(--text);
       background:var(--bg);
       line-height:1.6;
@@ -38,6 +41,7 @@
     }
 
     /* Page content */
+
     h1{
       margin-bottom:6px;
     }
@@ -59,6 +63,7 @@
     }
 
     /* Team layout */
+
     .team-grid{
       display:grid;
       grid-template-columns:minmax(0, 1fr);
@@ -79,21 +84,25 @@
       min-width:0;
     }
 
+    /* Photos - preserve original proportions */
+
     .avatar{
       width:180px;
-      height:180px;
-      border-radius:12px;
-      background:#f2f2f2;
       flex:0 0 180px;
+      border-radius:12px;
+      background:transparent;
       overflow:hidden;
     }
 
     .avatar img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
       display:block;
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      border-radius:12px;
     }
+
+    /* Person information */
 
     .info{
       min-width:0;
@@ -133,22 +142,23 @@
       margin:12px 0 0;
     }
 
+    /* Alumni - remove boxes */
 
-/* Alumni – remove boxes */
-section[aria-label="Alumni"] .person {
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  background: transparent;
-}
+    section[aria-label="Alumni"] .person{
+      border:none;
+      border-radius:0;
+      padding:0;
+      background:transparent;
+    }
 
-/* Reduce spacing between alumni */
-section[aria-label="Alumni"] .team-grid {
-  gap: 12px;
-}
+    section[aria-label="Alumni"] .team-grid{
+      gap:12px;
+    }
 
     /* Mobile layout */
+
     @media (max-width:600px){
+
       .person{
         flex-direction:column;
         padding:18px;
@@ -157,10 +167,24 @@ section[aria-label="Alumni"] .team-grid {
 
       .avatar{
         width:160px;
-        height:160px;
         flex:0 0 auto;
       }
+
+      .avatar img{
+        width:100%;
+        height:auto;
+        object-fit:contain;
+      }
+
+      /* Keep alumni without boxes or padding */
+
+      section[aria-label="Alumni"] .person{
+        padding:0;
+      }
+
     }
+
+    /* Footer */
 
     hr{
       border:0;
@@ -172,11 +196,14 @@ section[aria-label="Alumni"] .team-grid {
       font-size:14px;
       color:#444;
     }
+
   </style>
 </head>
 
 <body>
 <div class="wrap">
+
+  <!-- HEADER -->
 
   <header>
     <div class="nav">
@@ -273,12 +300,14 @@ section[aria-label="Alumni"] .team-grid {
 
       <div class="team-grid">
 
+        <!-- Marenn Ek -->
+
         <article class="person">
 
           <div class="avatar">
             <img
               src="assets/img/team/member-1.jpg"
-              alt="Photo of Lab Member"
+              alt="Photo of Marenn Ek"
               onerror="this.style.display='none';"
             />
           </div>
@@ -292,13 +321,17 @@ section[aria-label="Alumni"] .team-grid {
             </div>
 
             <p class="bio">
-              Marenn received her undergraduate degree from the University of Vermont, 
-              where she majored in Biochemistry and was also a division I athlete. Here, she also 
-              discovered her interest in research while in the Doublie lab, working on structural 
-              characterization of cancer-associated mutations in DNA repair enzymes. In the Rux Lab, 
-              she is expanding her research experience by working with mouse models to investigate 
-              synovial joint development and disease as she prepares to pursue graduate studies. 
-              Outside the lab, she enjoys running, cooking, and just about any outdoor activity.
+              Marenn received her undergraduate degree from the
+              University of Vermont, where she majored in Biochemistry
+              and was also a division I athlete. Here, she also
+              discovered her interest in research while in the Doublie
+              lab, working on structural characterization of
+              cancer-associated mutations in DNA repair enzymes.
+              In the Rux Lab, she is expanding her research experience
+              by working with mouse models to investigate synovial
+              joint development and disease as she prepares to pursue
+              graduate studies. Outside the lab, she enjoys running,
+              cooking, and just about any outdoor activity.
             </p>
 
           </div>
@@ -306,12 +339,14 @@ section[aria-label="Alumni"] .team-grid {
         </article>
 
 
+        <!-- Ruupala Kalaiarasu -->
+
         <article class="person">
 
           <div class="avatar">
             <img
               src="assets/img/team/RuupalaK.jpg"
-              alt="Photo of Lab Member"
+              alt="Photo of Ruupala Kalaiarasu"
               onerror="this.style.display='none';"
             />
           </div>
@@ -320,29 +355,36 @@ section[aria-label="Alumni"] .team-grid {
 
             <h3 class="name">Ruupala Kalaiarasu</h3>
 
-            <div class="role">UConn Undergraduate Student</div>
+            <div class="role">
+              UConn Undergraduate Student
+            </div>
 
             <p class="bio">
-              Ruupala is majoring in Molecular and Cell Biology and minoring in Women, 
-              Gender, and Sexuality Studies. She joined the lab as an HRP student and 
-              has continued as a SURF fellow. Her project focuses on the role of the 
-              Hox genes in synovial joint development. Ruupala also volunteers at 
-              Connecticut children’s and is a UConn peer ambassador for undergraduate 
-              research! Outside of the lab and school, she enjoys reading horror and 
-              mystery novels, listening to music (especially to SZA, Beyoncé, Leon 
-              Bridges, and Hozier), and crocheting!
+              Ruupala is majoring in Molecular and Cell Biology and
+              minoring in Women, Gender, and Sexuality Studies.
+              She joined the lab as an HRP student and has continued
+              as a SURF fellow. Her project focuses on the role of the
+              Hox genes in synovial joint development. Ruupala also
+              volunteers at Connecticut children’s and is a UConn
+              peer ambassador for undergraduate research!
+              Outside of the lab and school, she enjoys reading horror
+              and mystery novels, listening to music (especially to
+              SZA, Beyoncé, Leon Bridges, and Hozier), and crocheting!
             </p>
 
           </div>
 
         </article>
 
+
+        <!-- Sarah Stuhlmiller -->
+
         <article class="person">
 
           <div class="avatar">
             <img
               src="assets/img/team/SarahS.jpg"
-              alt="Photo of Lab Member"
+              alt="Photo of Sarah Stuhlmiller"
               onerror="this.style.display='none';"
             />
           </div>
@@ -351,26 +393,33 @@ section[aria-label="Alumni"] .team-grid {
 
             <h3 class="name">Sarah Stuhlmiller</h3>
 
-            <div class="role">UConn Undergraduate Student</div>
+            <div class="role">
+              UConn Undergraduate Student
+            </div>
 
             <p class="bio">
-             Sarah is pursuing a B.S. in Biological Sciences with a minor in Molecular 
-              and Cell Biology. Sarah joined the lab through the HRP program and is 
-              using reporter mice to study Hedgehog signal patterning during postnatal 
-              articular cartilage maturation. Outside of research, she is catching up 
-              on must-watch shows and movies, reading in the sun, and exploring nature. 
+              Sarah is pursuing a B.S. in Biological Sciences with
+              a minor in Molecular and Cell Biology. Sarah joined
+              the lab through the HRP program and is using reporter
+              mice to study Hedgehog signal patterning during postnatal
+              articular cartilage maturation. Outside of research,
+              she is catching up on must-watch shows and movies,
+              reading in the sun, and exploring nature.
             </p>
 
           </div>
 
         </article>
 
+
+        <!-- Annie Vincent -->
+
         <article class="person">
 
           <div class="avatar">
             <img
               src="assets/img/team/AnnieV.jpg"
-              alt="Photo of Lab Member"
+              alt="Photo of Annie Vincent"
               onerror="this.style.display='none';"
             />
           </div>
@@ -379,20 +428,26 @@ section[aria-label="Alumni"] .team-grid {
 
             <h3 class="name">Annie Vincent</h3>
 
-            <div class="role">UConn Undergraduate Student</div>
+            <div class="role">
+              UConn Undergraduate Student
+            </div>
 
             <p class="bio">
-             Annie (she/her) is pursuing a B.S. in Molecular and Cell Biology. 
-              She is a member of UConn's club running team and recently completed 
-              her first marathon! In the lab, Annie studies the postnatal activation 
-              of Hedgehog signaling in the hip joints of mice to better understand 
-              its role in the early development and progression of osteoarthritis.  
+              Annie (she/her) is pursuing a B.S. in Molecular and
+              Cell Biology. She is a member of UConn's club running
+              team and recently completed her first marathon!
+              In the lab, Annie studies the postnatal activation
+              of Hedgehog signaling in the hip joints of mice to
+              better understand its role in the early development
+              and progression of osteoarthritis.
             </p>
 
           </div>
 
-        </article>        
+        </article>
 
+
+        <!-- Lucy -->
 
         <article class="person">
 
@@ -408,7 +463,9 @@ section[aria-label="Alumni"] .team-grid {
 
             <h3 class="name">Lucy</h3>
 
-            <div class="role">Lab Mascot</div>
+            <div class="role">
+              Lab Mascot
+            </div>
 
             <p class="bio">
               Lucy is the OG member of the lab.
@@ -434,67 +491,81 @@ section[aria-label="Alumni"] .team-grid {
       <div class="team-grid">
 
         <article class="person">
-
           <div class="info">
 
             <h3 class="name">Isabelle Mondo</h3>
 
             <div class="role">
-              Intern. Spring 2026. <em>Current:</em> DPT student at University of Rhode Island
+              Intern. Spring 2026.
+              <em>Current:</em> DPT student at University of Rhode Island
             </div>
 
+          </div>
         </article>
 
-        <article class="person">
 
+        <article class="person">
           <div class="info">
 
             <h3 class="name">Jillian Vandlik</h3>
 
             <div class="role">
-              Research Assistant. 2024-2026. <em>Current:</em> post-graduate student at UCONN
+              Research Assistant. 2024-2026.
+              <em>Current:</em> post-graduate student at UCONN
             </div>
 
+          </div>
         </article>
 
-         <article class="person">
 
+        <article class="person">
           <div class="info">
 
             <h3 class="name">Krisztina Buzas</h3>
 
             <div class="role">
-              Research Assistant. 2024-2026. <em>Current:</em> medical Student at KCU School of Osteopathic Medicine
+              Research Assistant. 2024-2026.
+              <em>Current:</em> medical Student at
+              KCU School of Osteopathic Medicine
             </div>
-            
-        </article>
-         <article class="person">
 
+          </div>
+        </article>
+
+
+        <article class="person">
           <div class="info">
 
             <h3 class="name">JP Yue</h3>
 
             <div class="role">
-              Rotation Student. Summer 2025. <em>Current:</em> MD-PhD student at UConn Health
+              Rotation Student. Summer 2025.
+              <em>Current:</em> MD-PhD student at UConn Health
             </div>
-            </article>
 
-     <article class="person">
+          </div>
+        </article>
 
+
+        <article class="person">
           <div class="info">
 
             <h3 class="name">Michael Casanova</h3>
 
             <div class="role">
-              Intern. Summer 2024. <em>Current:</em> undergraduate student at UCONN
+              Intern. Summer 2024.
+              <em>Current:</em> undergraduate student at UCONN
             </div>
-            
+
+          </div>
         </article>
 
       </div>
 
     </section>
 
+
+    <!-- FOOTER -->
 
     <hr />
 
