@@ -10,6 +10,9 @@
 
   <!-- News-page-only styles -->
   <style>
+
+    /* News list */
+
     .news-list{
       list-style:none;
       padding:0;
@@ -47,29 +50,40 @@
       color:#333;
     }
 
+    /* News images - preserve original proportions */
+
     .news-images{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
       margin-top:10px;
+      align-items:flex-start;
     }
 
     .news-images img{
-      width:110px;
-      height:78px;
-      object-fit:cover;
+      width:150px;
+      height:auto;
+      object-fit:contain;
+      display:block;
       border-radius:8px;
-      background:#f2f2f2;
+      background:#fff;
       border:1px solid var(--border);
-      cursor: zoom-in;
+      cursor:zoom-in;
     }
 
+    /* Mobile image layout */
+
     @media (max-width:600px){
+
       .news-images img{
-        width:100%;
-        height:180px;
+        width:60%;
+        max-width:250px;
+        height:auto;
       }
+
     }
+
+    /* Tags */
 
     .tag{
       display:inline-block;
@@ -82,125 +96,249 @@
       vertical-align:middle;
     }
 
-    /* ---------- LIGHTBOX ---------- */
+    /* Lightbox */
+
     .lightbox{
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      padding: 20px;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.85);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:1000;
+      padding:20px;
+      cursor:zoom-out;
     }
 
     .lightbox.open{
-      display: flex;
+      display:flex;
     }
 
     .lightbox img{
-      max-width: 95%;
-      max-height: 95%;
-      border-radius: 10px;
-      background: #fff;
+      max-width:95%;
+      max-height:95%;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+      border-radius:10px;
+      background:#fff;
     }
 
+    /* Close button */
+
     .lightbox::after{
-      content: "×";
-      position: absolute;
-      top: 20px;
-      right: 26px;
-      font-size: 36px;
-      color: #fff;
-      cursor: pointer;
+      content:"×";
+      position:absolute;
+      top:20px;
+      right:26px;
+      font-size:36px;
+      color:#fff;
+      cursor:pointer;
     }
+
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <div class="nav">
-        <div class="brand">Rux Lab</div>
 
-        <nav aria-label="Primary">
-          <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="news.html" aria-current="page">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<div class="wrap">
 
-    <main>
-      <h1>News</h1>
-      <p class="lede">Lab updates, announcements, and highlights.</p>
+  <!-- Header -->
 
-      <ul class="news-list">
-        
-        <li class="news-item">
-          <p class="news-date"><time datetime="2026-3">March 2026</time></p>
-          <h2 class="news-title">
-            Ruupala wins best poster prize at the MSI Research Day!
-          </h2>
-          <div class="news-images">
-            <img src="assets/img/news/Ruupala_poster_prize.jpg" alt="Ruupala's poster award" />
-          </div>
-        </li>
-        
-        <li class="news-item">
-          <p class="news-date"><time datetime="2023-11">November 2023</time></p>
-          <h2 class="news-title">
-            The Rux Lab is Born!
-          </h2>
-          <p class="news-body">
-            We’re excited to share updates on our research here!
-          </p>
-          <div class="news-images">
-            <img src="assets/img/news/lab-launch1.jpg" alt="Rux Lab opening at UConn Health" />
-            <img src="assets/img/news/lab-launch2.jpg" alt="Rux Lab opening at UConn Health" />
-          </div>
-        </li>
+  <header>
 
-      </ul>
+    <div class="nav">
 
-      <hr />
+      <div class="brand">Rux Lab</div>
 
-      <footer>
-        © <span id="year"></span> Danielle Rux Lab | Synovial Joint Development &amp; Disease
-      </footer>
-    </main>
-  </div>
+      <nav aria-label="Primary">
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <img src="" alt="" />
-  </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="news.html" aria-current="page">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+      </nav>
 
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = lightbox.querySelector("img");
+    </div>
 
-    document.querySelectorAll(".news-images img").forEach(img => {
-      img.addEventListener("click", () => {
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        lightbox.classList.add("open");
-        lightbox.setAttribute("aria-hidden", "false");
-      });
+  </header>
+
+
+  <!-- Main content -->
+
+  <main>
+
+    <h1>News</h1>
+
+    <p class="lede">
+      Lab updates, announcements, and highlights.
+    </p>
+
+
+    <ul class="news-list">
+
+      <!-- March 2026 -->
+
+      <li class="news-item">
+
+        <p class="news-date">
+          <time datetime="2026-03">March 2026</time>
+        </p>
+
+        <h2 class="news-title">
+          Ruupala wins best poster prize at the MSI Research Day!
+        </h2>
+
+        <div class="news-images">
+
+          <img
+            src="assets/img/news/Ruupala_poster_prize.jpg"
+            alt="Ruupala's poster award"
+            loading="lazy"
+          />
+
+        </div>
+
+      </li>
+
+
+      <!-- November 2023 -->
+
+      <li class="news-item">
+
+        <p class="news-date">
+          <time datetime="2023-11">November 2023</time>
+        </p>
+
+        <h2 class="news-title">
+          The Rux Lab is Born!
+        </h2>
+
+        <p class="news-body">
+          We’re excited to share updates on our research here!
+        </p>
+
+        <div class="news-images">
+
+          <img
+            src="assets/img/news/lab-launch1.jpg"
+            alt="Rux Lab opening at UConn Health"
+            loading="lazy"
+          />
+
+          <img
+            src="assets/img/news/lab-launch2.jpg"
+            alt="Rux Lab opening at UConn Health"
+            loading="lazy"
+          />
+
+        </div>
+
+      </li>
+
+    </ul>
+
+
+    <!-- Footer -->
+
+    <hr />
+
+    <footer>
+      © <span id="year"></span> Danielle Rux Lab |
+      Synovial Joint Development &amp; Disease
+    </footer>
+
+  </main>
+
+</div>
+
+
+<!-- Image lightbox -->
+
+<div
+  class="lightbox"
+  id="lightbox"
+  aria-hidden="true"
+  role="dialog"
+  aria-label="Enlarged news image"
+  tabindex="-1"
+>
+
+  <img src="" alt="" />
+
+</div>
+
+
+<!-- JavaScript -->
+
+<script>
+
+  // Automatically update footer year
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+  // Lightbox functionality
+
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = lightbox.querySelector("img");
+
+  document.querySelectorAll(".news-images img").forEach(img => {
+
+    img.addEventListener("click", () => {
+
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+
+      lightbox.focus();
+
     });
 
-    lightbox.addEventListener("click", () => {
-      lightbox.classList.remove("open");
-      lightbox.setAttribute("aria-hidden", "true");
-      lightboxImg.src = "";
-    });
-  </script>
+  });
+
+
+  // Close lightbox when clicked
+
+  lightbox.addEventListener("click", () => {
+
+    closeLightbox();
+
+  });
+
+
+  // Close lightbox using Escape key
+
+  document.addEventListener("keydown", (event) => {
+
+    if(event.key === "Escape"){
+      closeLightbox();
+    }
+
+  });
+
+
+  // Lightbox close function
+
+  function closeLightbox(){
+
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden", "true");
+
+    lightboxImg.src = "";
+    lightboxImg.alt = "";
+
+  }
+
+</script>
+
 </body>
 </html>
