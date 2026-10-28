@@ -84,21 +84,36 @@
       min-width:0;
     }
 
-    /* Photos - preserve original proportions */
+    /*
+      PHOTOS - NO CROPPING
 
-    .avatar{
+      Images retain their original proportions.
+      Overrides prevent the main stylesheet from
+      forcing fixed image heights or square crops.
+    */
+
+    .person .avatar{
       width:180px;
       flex:0 0 180px;
+      height:auto !important;
+      max-height:none !important;
+      aspect-ratio:auto !important;
       border-radius:12px;
       background:transparent;
-      overflow:hidden;
+      overflow:visible !important;
+      align-self:flex-start;
     }
 
-    .avatar img{
+    .person .avatar img{
       display:block;
-      width:100%;
-      height:auto;
-      object-fit:contain;
+      width:100% !important;
+      height:auto !important;
+      max-width:100% !important;
+      max-height:none !important;
+      aspect-ratio:auto !important;
+      object-fit:contain !important;
+      object-position:center !important;
+      position:static !important;
       border-radius:12px;
     }
 
@@ -165,18 +180,10 @@
         gap:16px;
       }
 
-      .avatar{
+      .person .avatar{
         width:160px;
         flex:0 0 auto;
       }
-
-      .avatar img{
-        width:100%;
-        height:auto;
-        object-fit:contain;
-      }
-
-      /* Keep alumni without boxes or padding */
 
       section[aria-label="Alumni"] .person{
         padding:0;
